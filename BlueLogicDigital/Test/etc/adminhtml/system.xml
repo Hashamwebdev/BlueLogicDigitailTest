@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="bluelogicdigital" translate="label" sortOrder="999">
+			<label>Blue Logic Digital</label>
+		</tab>
+		<section id="test" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>Test</label>
+			<tab>bluelogicdigital</tab>
+			<resource>BlueLogicDigital_Test::config_bluelogicdigital_test</resource>
+			<group id="general" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>General</label>
+				<field id="show_disclaimer" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Show Disclaimer</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="product_disclaimer" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Product Disclaimer</label>
+					<comment>Please add disclaimer once you set show disclaimer to yes it will show the disclaimer to all product detail pages</comment>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

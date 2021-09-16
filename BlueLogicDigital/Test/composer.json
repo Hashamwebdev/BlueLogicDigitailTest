@@ -1,0 +1,22 @@
+{
+    "name": "bluelogicdigital/module-test",
+    "description": "Blue Logic Digital Test",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Muhammad Hasham",
+            "email": "hasham.webdev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "BlueLogicDigital\\Test\\": ""
+        }
+    }
+}

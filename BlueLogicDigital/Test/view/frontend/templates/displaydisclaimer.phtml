@@ -1,0 +1,10 @@
+<?php
+/**
+ * @var $block \BlueLogicDigital\Test\Block\DisplayDisclaimer
+ */
+?>
+<?php if ($block->showDisclaimer()): ?>
+<div style="background-color: lavender;">
+    <p style="padding: 10px;text-align: center;"><small><?= $block->displayDisclaimer() ?></small></p>
+</div>
+<?php endif; ?>

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="BlueLogicDigital\Test\Api\BLDProductsRepositoryInterface" type="BlueLogicDigital\Test\Model\BLDProductsRepository"/>
+	<preference for="BlueLogicDigital\Test\Api\Data\BLDProductsInterface" type="BlueLogicDigital\Test\Model\Data\BLDProducts"/>
+	<preference for="BlueLogicDigital\Test\Api\Data\BLDProductsSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="BlueLogicDigital\Test\Model\ResourceModel\BLDProducts\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">bluelogicdigital_test_bld_products</argument>
+			<argument name="resourceModel" xsi:type="string">BlueLogicDigital\Test\Model\ResourceModel\BLDProducts\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="bluelogicdigital_test_bld_products_listing_data_source" xsi:type="string">BlueLogicDigital\Test\Model\ResourceModel\BLDProducts\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

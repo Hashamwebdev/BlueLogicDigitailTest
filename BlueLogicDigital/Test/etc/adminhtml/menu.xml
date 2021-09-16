@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="BlueLogicDigital::top_level" title="BlueLogicDigital" module="BlueLogicDigital_Test" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="BlueLogicDigital_Test::bluelogicdigital_test_bld_products" title="BLD products" module="BlueLogicDigital_Test" sortOrder="9999" resource="Magento_Backend::content" parent="BlueLogicDigital::top_level" action="bluelogicdigital_test/bldproducts/index"/>
+	</menu>
+</config>

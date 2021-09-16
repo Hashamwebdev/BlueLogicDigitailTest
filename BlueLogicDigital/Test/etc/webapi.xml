@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/bluelogicdigital-test/bld_products" method="POST">
+		<service class="BlueLogicDigital\Test\Api\BLDProductsRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="BlueLogicDigital_Test::BLD_products_save"/>
+		</resources>
+	</route>
+	<route url="/V1/bluelogicdigital-test/bld_products/search" method="GET">
+		<service class="BlueLogicDigital\Test\Api\BLDProductsRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="BlueLogicDigital_Test::BLD_products_view"/>
+		</resources>
+	</route>
+	<route url="/V1/bluelogicdigital-test/bld_products/:bldProductsId" method="GET">
+		<service class="BlueLogicDigital\Test\Api\BLDProductsRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="BlueLogicDigital_Test::BLD_products_view"/>
+		</resources>
+	</route>
+	<route url="/V1/bluelogicdigital-test/bld_products/:bldProductsId" method="PUT">
+		<service class="BlueLogicDigital\Test\Api\BLDProductsRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="BlueLogicDigital_Test::BLD_products_update"/>
+		</resources>
+	</route>
+	<route url="/V1/bluelogicdigital-test/bld_products/:bldProductsId" method="DELETE">
+		<service class="BlueLogicDigital\Test\Api\BLDProductsRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="BlueLogicDigital_Test::BLD_products_delete"/>
+		</resources>
+	</route>
+</routes>
